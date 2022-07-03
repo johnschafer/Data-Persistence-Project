@@ -17,7 +17,8 @@ public class MenuUIHandler : MonoBehaviour
     public void NewName(string input)
     {
         playerName = input;
-        MainDataManager.instance.PlayerName = playerName;
+        MainDataManager.instance.CurrentUserName = playerName;
+        MainDataManager.instance.SaveUserData();
     }
 
     public void NewBestScore(int bestScore)
